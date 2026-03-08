@@ -13,11 +13,11 @@ async function register(req, res) {
     });
 
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' }); 
-    // await user.save();
+    await user.save();
 
-    // res.status(201).json({
-    //     message: 'User registered successfully'
-    // });
+    res.status(201).json({
+        message: 'User registered successfully'
+    });
 }
 
 // async function login(req, res) {
