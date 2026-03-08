@@ -22,12 +22,12 @@ async function register(req, res) {
     });
 }
 
-// async function login(req, res) {
-//     const { email, password } = req.body;
-//     // TODO: Implement login logic
-// }
+async function login(req, res) {
+    const { email, password } = req.body;
+    // TODO: Implement login logic
+}
 
 module.exports = {
     register,
-    // login
-};
+    login
+}
