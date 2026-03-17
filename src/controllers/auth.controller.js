@@ -11,7 +11,9 @@ async function register(req, res) {
             password
         });
 
-        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' }); 
+        const token = jwt.sign({ id: user._id }, 
+            process.env.JWT_SECRET, 
+            { expiresIn: '1h' }); 
         await user.save();
         res.cookie('mamaToken', token, { httpOnly: true });
         res.status(201).json({
