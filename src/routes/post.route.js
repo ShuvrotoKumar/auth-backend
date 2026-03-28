@@ -3,6 +3,7 @@ const router = express.Router();
 
 
 router.post('/create', (req, res) => {
+    console.log(req.body);
     res.json({ message: 'Post created' });
 });
 
